@@ -84,13 +84,13 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="866.8000000000001,3035.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="866.8000000000001,2192.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence str regex" sap:VirtualizedContainerService.HintSize="649.6,2178.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Sequence str regex" sap:VirtualizedContainerService.HintSize="649.6,2169.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Name" />
         <Variable x:TypeArguments="x:String" Default="Sreekar Reddy Alluru 9000000000 East Bangalore 560001" Name="Var_String" />
@@ -301,90 +301,6 @@
         </Assign.Value>
       </Assign>
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="616,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Lastregex Name &quot;+Name+&quot; Mobnum &quot;+MobNO+&quot; City &quot;+city+&quot; Pincode &quot;+Pincode]" />
-    </Sequence>
-    <Sequence DisplayName="Sequence letter  character counts" sap:VirtualizedContainerService.HintSize="649.6,833.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="scg:Dictionary(x:Char, x:Int32)" Name="Dict_CharCounts" />
-        <Variable x:TypeArguments="x:String" Default="sssdflkjgkkkkkkkfdslajfafffff" Name="Var_Str" />
-        <Variable x:TypeArguments="x:String" Name="Strresult" />
-      </Sequence.Variables>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="Assign_15">
-        <Assign.To>
-          <OutArgument x:TypeArguments="scg:Dictionary(x:Char, x:Int32)">[Dict_CharCounts]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="scg:Dictionary(x:Char, x:Int32)">[Var_Str.ToCharArray().GroupBy(Function(c) c).ToDictionary(Function(g) g.Key, Function(g) g.Count())]</InArgument>
-        </Assign.Value>
-      </Assign>
-      <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:Char, x:Int32)" CurrentIndex="{x:Null}" DisplayName="For Each Item" sap:VirtualizedContainerService.HintSize="616,56.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Dict_CharCounts]">
-        <ui:ForEach.Body>
-          <ActivityAction x:TypeArguments="scg:KeyValuePair(x:Char, x:Int32)">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:Char, x:Int32)" Name="Item" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Letter &quot;+Item.Key.ToString+&quot; Count &quot;+Item.Value.ToString]" />
-            </Sequence>
-          </ActivityAction>
-        </ui:ForEach.Body>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:ForEach>
-      <Assign sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="Assign_16">
-        <Assign.To>
-          <OutArgument x:TypeArguments="scg:Dictionary(x:Char, x:Int32)">[Dict_CharCounts]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="scg:Dictionary(x:Char, x:Int32)">[Var_Str.ToCharArray().GroupBy(Function(c) c).Where(Function(g) g.Count() &gt;1).ToDictionary(Function(g) g.Key, Function(g) g.Count())]</InArgument>
-        </Assign.Value>
-      </Assign>
-      <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:Char, x:Int32)" CurrentIndex="{x:Null}" DisplayName="For Each Item" sap:VirtualizedContainerService.HintSize="616,56.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Dict_CharCounts]">
-        <ui:ForEach.Body>
-          <ActivityAction x:TypeArguments="scg:KeyValuePair(x:Char, x:Int32)">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:Char, x:Int32)" Name="Item" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;2ndLetter &quot;+Item.Key.ToString+&quot; Count &quot;+Item.Value.ToString]" />
-            </Sequence>
-          </ActivityAction>
-        </ui:ForEach.Body>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:ForEach>
-      <Assign sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="Assign_17">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[Strresult]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[String.Join(", ", Var_Str.ToCharArray().GroupBy(Function(c) c).Select(Function(g) g.Key.ToString + "=" + g.Count().ToString))]</InArgument>
-        </Assign.Value>
-      </Assign>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="616,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Output result &quot;+Strresult]" />
     </Sequence>
   </Sequence>
 </Activity>

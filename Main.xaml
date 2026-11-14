@@ -31,6 +31,28 @@
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.Activities.System.Text</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Web.Activities.JSON</x:String>
+      <x:String>UiPath.Sdk.Activities</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -82,15 +104,30 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="866.8000000000001,2192.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="866.8000000000001,2541.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence str regex" sap:VirtualizedContainerService.HintSize="649.6,2169.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Sequence str regex" sap:VirtualizedContainerService.HintSize="649.6,2518.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Name" />
         <Variable x:TypeArguments="x:String" Default="Sreekar Reddy Alluru 9000000000 East Bangalore 560001" Name="Var_String" />
@@ -100,6 +137,7 @@
         <Variable x:TypeArguments="x:String" Name="City" />
         <Variable x:TypeArguments="x:String" Name="pattern" />
         <Variable x:TypeArguments="str:Match" Name="match1" />
+        <Variable x:TypeArguments="x:Object" Name="serialix" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -107,7 +145,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[City.Contains(&quot;Path&quot;).ToString]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="616,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[City.Contains(&quot;Path&quot;).ToString]" />
       <Assign sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="s:String[]">[StringArr]</OutArgument>
@@ -122,13 +160,13 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,2116" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,2212" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[currentText.ToString.Trim.Count=6]" sap:VirtualizedContainerService.HintSize="451.2,563.2" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[currentText.ToString.Trim.Count=6]" sap:VirtualizedContainerService.HintSize="451.2,595.2" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
@@ -158,7 +196,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[currentText.ToString.Trim.Count=10]" sap:VirtualizedContainerService.HintSize="451.2,563.2" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[currentText.ToString.Trim.Count=10]" sap:VirtualizedContainerService.HintSize="451.2,595.2" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
@@ -188,7 +226,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If Condition="[currentText.ToString.Trim.Count=7]" sap:VirtualizedContainerService.HintSize="451.2,929.6" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[currentText.ToString.Trim.Count=7]" sap:VirtualizedContainerService.HintSize="451.2,961.6" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
@@ -240,18 +278,20 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Regex Maches&quot;]" />
       <ui:Matches BuilderPattern="\b\d{10}\b" DisplayName="Find Matching Patterns" FirstMatch="[MobNO]" sap:VirtualizedContainerService.HintSize="616,92" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[Var_String]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\b\\d{10}\\b&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\b\d{10}\b" RegexOption="IgnoreCase, Compiled" />
       <Assign sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="Assign_7">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[City]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[Regex.Matches(Var_String, "[A-Za-z]+")(1).Value]</InArgument>
+          <InArgument x:TypeArguments="x:String">[Regex.Match(Var_String, "(?&lt;=\d{10}\s)(.+?)(?=\s\d{6})").Value]</InArgument>
         </Assign.Value>
       </Assign>
       <ui:Matches BuilderPattern="\b\d{6}\b" DisplayName="Find Matching Patterns" FirstMatch="[Pincode]" sap:VirtualizedContainerService.HintSize="616,92" sap2010:WorkflowViewState.IdRef="Matches_4" Input="[Var_String]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\b\\d{6}\\b&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\b\d{6}\b" RegexOption="IgnoreCase, Compiled" />
-      <ui:Matches BuilderPattern="^[A-Za-z]+" DisplayName="Find Matching Patterns" FirstMatch="[Name]" sap:VirtualizedContainerService.HintSize="616,92" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[Var_String]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;^[A-Za-z]+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="^[A-Za-z]+" RegexOption="IgnoreCase, Compiled" />
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Name &quot;+Name+&quot; Mobnum &quot;+MobNO+&quot; City &quot;+city+&quot; Pincode &quot;+Pincode]" />
+      <ui:Matches BuilderPattern="^[A-Za-z\s\.]+?(?=\s*\d)" DisplayName="Find Matching Patterns" FirstMatch="[Name]" sap:VirtualizedContainerService.HintSize="616,92" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[Var_String]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;^[A-Za-z\\s\\.]+?(?=\\s*\\d)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="^[A-Za-z\s\.]+?(?=\s*\d)" RegexOption="IgnoreCase, Compiled" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="616,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Name &quot;+Name+&quot; Mobnum &quot;+MobNO+&quot; City &quot;+city+&quot; Pincode &quot;+Pincode]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;custom text regex match&quot;]" />
       <Assign sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[pattern]</OutArgument>

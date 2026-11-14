@@ -1,10 +1,13 @@
 {
-  "name": "BlankProcess2",
+  "name": "InterviewPractice1",
   "projectId": "3120c49d-3f35-4ac6-b0fc-6436b4a3b346",
-  "description": "Blank Process",
-  "main": "Main.xaml",
+  "description": "Strings, Linq queries etc",
+  "main": "LinqQueries.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[24.10.7]"
+    "UiPath.Database.Activities": "[2.1.1]",
+    "UiPath.System.Activities": "[24.10.7]",
+    "UiPath.UIAutomation.Activities": "[26.10.5]",
+    "UiPath.WebAPI.Activities": "[2.5.2]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -15,9 +18,9 @@
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
-    "isAttended": false,
+    "isAttended": true,
     "requiresUserInteraction": true,
-    "supportsPersistence": false,
+    "supportsPersistence": true,
     "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
@@ -33,7 +36,6 @@
     "projectProfile": "Developement",
     "outputType": "Process",
     "libraryOptions": {
-      "includeOriginalXaml": false,
       "privateWorkflows": []
     },
     "processOptions": {
@@ -47,6 +49,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "d77e06ce-b182-40f6-ae8a-481e30e829e5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "LinqQueries.xaml",
+      "uniqueId": "a758805b-0b89-47af-a290-74b6bd2d0c85",
       "input": [],
       "output": []
     }

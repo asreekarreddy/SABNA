@@ -2,11 +2,6 @@
   "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
   "entryPoints": [
     {
-      "filePath": "LinqQueries.xaml",
-      "uniqueId": "a758805b-0b89-47af-a290-74b6bd2d0c85",
-      "type": "process"
-    },
-    {
       "filePath": "Main.xaml",
       "uniqueId": "d77e06ce-b182-40f6-ae8a-481e30e829e5",
       "type": "process"

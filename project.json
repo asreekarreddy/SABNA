@@ -2,7 +2,7 @@
   "name": "InterviewPractice1",
   "projectId": "3120c49d-3f35-4ac6-b0fc-6436b4a3b346",
   "description": "Strings, Linq queries etc",
-  "main": "LinqQueries.xaml",
+  "main": "Main.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[2.1.1]",
     "UiPath.System.Activities": "[24.10.7]",
@@ -49,12 +49,6 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "d77e06ce-b182-40f6-ae8a-481e30e829e5",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "LinqQueries.xaml",
-      "uniqueId": "a758805b-0b89-47af-a290-74b6bd2d0c85",
       "input": [],
       "output": []
     }
